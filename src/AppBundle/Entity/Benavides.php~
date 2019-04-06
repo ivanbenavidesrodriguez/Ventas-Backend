@@ -1,0 +1,159 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Benavides
+ *
+ * @ORM\Table(name="benavides")
+ * @ORM\Entity
+ */
+class Benavides
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombres", type="string", length=100, nullable=false)
+     */
+    private $nombres;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="apÃ©llidos", type="string", length=70, nullable=false)
+     */
+    private $apã©llidos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="usuario", type="string", length=50, nullable=false)
+     */
+    private $usuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="clave", type="string", length=40, nullable=false)
+     */
+    private $clave;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombres
+     *
+     * @param string $nombres
+     *
+     * @return Benavides
+     */
+    public function setNombres($nombres)
+    {
+        $this->nombres = $nombres;
+
+        return $this;
+    }
+
+    /**
+     * Get nombres
+     *
+     * @return string
+     */
+    public function getNombres()
+    {
+        return $this->nombres;
+    }
+
+    /**
+     * Set apã©llidos
+     *
+     * @param string $apã©llidos
+     *
+     * @return Benavides
+     */
+    public function setApã©llidos($apã©llidos)
+    {
+        $this->apã©llidos = $apã©llidos;
+
+        return $this;
+    }
+
+    /**
+     * Get apã©llidos
+     *
+     * @return string
+     */
+    public function getApã©llidos()
+    {
+        return $this->apã©llidos;
+    }
+
+    /**
+     * Set usuario
+     *
+     * @param string $usuario
+     *
+     * @return Benavides
+     */
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+
+        return $this;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return string
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * Set clave
+     *
+     * @param string $clave
+     *
+     * @return Benavides
+     */
+    public function setClave($clave)
+    {
+        $this->clave = $clave;
+
+        return $this;
+    }
+
+    /**
+     * Get clave
+     *
+     * @return string
+     */
+    public function getClave()
+    {
+        return $this->clave;
+    }
+}
